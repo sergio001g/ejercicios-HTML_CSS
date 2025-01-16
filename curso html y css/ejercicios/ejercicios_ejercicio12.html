@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 12: Selectores CSS Avanzados</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        /* Selector de atributo */
+        a[href^="https"] {
+            color: #007bff;
+            text-decoration: none;
+        }
+        /* Selector de hijo directo */
+        ul > li {
+            margin-bottom: 10px;
+        }
+        /* Selector de hermano adyacente */
+        h2 + p {
+            font-weight: bold;
+        }
+        /* Selector de pseudo-clase */
+        li:nth-child(odd) {
+            background-color: #e9ecef;
+        }
+        /* Selector de pseudo-elemento */
+        p::first-letter {
+            font-size: 150%;
+            font-weight: bold;
+            color: #28a745;
+        }
+        /* Combinación de selectores */
+        .container div:not(:last-child) {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #dee2e6;
+        }
+    </style>
+</head>
+<body>
+    <h1>Selectores CSS Avanzados</h1>
+    <div class="container">
+        <div>
+            <h2>Enlaces Externos</h2>
+            <p>Los enlaces que comienzan con https: tienen un color especial.</p>
+            <a href="https://www.ejemplo.com">Enlace Externo</a>
+            <a href="/pagina-interna">Enlace Interno</a>
+        </div>
+        <div>
+            <h2>Listas Estilizadas</h2>
+            <ul>
+                <li>Primer ítem</li>
+                <li>Segundo ítem</li>
+                <li>Tercer ítem</li>
+                <li>Cuarto ítem</li>
+            </ul>
+        </div>
+        <div>
+            <h2>Párrafos con Estilo</h2>
+            <p>Este párrafo tiene la primera letra más grande y en verde.</p>
+            <p>Este es otro párrafo para demostrar los selectores.</p>
+        </div>
+    </div>
+</body>
+</html>
+

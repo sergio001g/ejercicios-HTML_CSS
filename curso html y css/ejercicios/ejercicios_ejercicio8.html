@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8: CSS Grid</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            padding: 20px;
+        }
+        .grid-item {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .item-1 {
+            grid-column: 1 / 3;
+            grid-row: 1 / 3;
+        }
+        .item-4 {
+            grid-column: 3;
+            grid-row: 1 / 3;
+        }
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+            .item-1, .item-4 {
+                grid-column: auto;
+                grid-row: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Grid Layout</h1>
+    <div class="grid-container">
+        <div class="grid-item item-1">
+            <h2>Ítem 1</h2>
+            <p>Este ítem ocupa 2 columnas y 2 filas en pantallas grandes.</p>
+        </div>
+        <div class="grid-item item-2">
+            <h2>Ítem 2</h2>
+            <p>Este es un ítem de tamaño normal.</p>
+        </div>
+        <div class="grid-item item-3">
+            <h2>Ítem 3</h2>
+            <p>Este es otro ítem de tamaño normal.</p>
+        </div>
+        <div class="grid-item item-4">
+            <h2>Ítem 4</h2>
+            <p>Este ítem ocupa 1 columna y 2 filas en pantallas grandes.</p>
+        </div>
+    </div>
+</body>
+</html>
+

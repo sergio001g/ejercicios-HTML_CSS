@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 20: Optimización CSS</title>
+    <style>
+        /* Uso de variables CSS para consistencia y fácil mantenimiento */
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --font-main: Arial, sans-serif;
+            --spacing-unit: 1rem;
+        }
+
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing-unit);
+        }
+
+        /* Uso de clases utilitarias para estilos comunes */
+        .mt-1 { margin-top: var(--spacing-unit); }
+        .mb-1 { margin-bottom: var(--spacing-unit); }
+        .text-center { text-align: center; }
+
+        /* Estilos específicos */
+        .card {
+            background-color: #fff;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: var(--spacing-unit);
+            margin-bottom: var(--spacing-unit);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: darken(var(--primary-color), 10%);
+        }
+
+        /* Media query para diseño responsivo */
+        @media (max-width: 600px) {
+            body {
+                padding: calc(var(--spacing-unit) / 2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="text-center mb-1">
+        <h1>Optimización CSS</h1>
+    </header>
+    <main>
+        <section class="card">
+            <h2>Técnicas de Optimización</h2>
+            <ul class="mt-1 mb-1">
+                <li>Uso de variables CSS para consistencia</li>
+                <li>Clases utilitarias para estilos comunes</li>
+                <li>Minimización de selectores específicos</li>
+                <li>Uso de media queries para diseño responsivo</li>
+            </ul>
+        </section>
+        <section class="card mt-1">
+            <h2>Ejemplo de Optimización</h2>
+            <p class="mb-1">Este ejemplo demuestra varias técnicas de optimización CSS, incluyendo el uso de variables, clases utilitarias y un diseño responsivo.</p>
+            <a href="#" class="btn">Leer más</a>
+        </section>
+    </main>
+    <footer class="text-center mt-1">
+        <p>&copy; 2025 Curso de Optimización CSS</p>
+    </footer>
+</body>
+</html>
+
